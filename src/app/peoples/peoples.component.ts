@@ -25,7 +25,7 @@ export class PeoplesComponent implements OnInit {
 
   constructor(private httpClient: HttpClient){}
   ngOnInit(){
-    this.httpClient.get("http://agl-developer-test.azurewebsites.net/people.json").subscribe(data =>{
+    this.httpClient.get("https://agl-developer-test.azurewebsites.net/people.json").subscribe(data =>{
      this.originalPeoples = data;
      this.sortBy('gender');
     //console.log(data);
