@@ -1,0 +1,14 @@
+<div>
+    <h2>
+        People list from web json file...
+    </h2>
+    <div *ngFor="let item of peopleList;let i=index">
+        {{i>0 && peopleList[i-1].gender==item.gender?'':item.gender}} 
+        <div *ngFor="let pet of item.pets">
+            <li  *ngIf='pet.type==="Cat"' style="margin-left:4em">    
+               {{pet.name}}
+            </li>
+        </div>
+    </div>
+  </div>
+
